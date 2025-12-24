@@ -94,19 +94,23 @@ const Index = () => {
   const competencies = [
     {
       title: 'Анализ отраслевых рынков',
-      description: 'Глубокое исследование динамики, структуры и драйверов отраслевых рынков'
+      description: 'Глубокое исследование динамики, структуры и драйверов отраслевых рынков',
+      icon: 'TrendingUp'
     },
     {
       title: 'Разработка стратегий',
-      description: 'Формирование долгосрочных стратегий развития бизнеса на основе данных'
+      description: 'Формирование долгосрочных стратегий развития бизнеса на основе данных',
+      icon: 'Target'
     },
     {
       title: 'Финансовое моделирование',
-      description: 'Построение прогнозных моделей и оценка экономической эффективности'
+      description: 'Построение прогнозных моделей и оценка экономической эффективности',
+      icon: 'Calculator'
     },
     {
       title: 'Конкурентный анализ',
-      description: 'Комплексная оценка конкурентной среды и позиционирования'
+      description: 'Комплексная оценка конкурентной среды и позиционирования',
+      icon: 'Users'
     }
   ];
 
@@ -144,7 +148,10 @@ const Index = () => {
 
         <section className="animate-fade-in space-y-12">
           <div className="border-t border-border pt-12">
-            <h2 className="text-3xl font-semibold mb-8">Обо мне</h2>
+            <div className="flex items-center gap-3 mb-8">
+              <Icon name="User" size={28} className="text-primary" />
+              <h2 className="text-3xl font-semibold">Обо мне</h2>
+            </div>
             <div className="prose prose-lg max-w-none text-muted-foreground">
               <p className="text-lg leading-relaxed">
                 <span className="font-medium text-foreground">Миссия:</span> Помогать бизнес-лидерам принимать смелые 
@@ -184,12 +191,22 @@ const Index = () => {
 
         <section className="animate-fade-in space-y-12">
           <div className="border-t border-border pt-12">
-            <h2 className="text-3xl font-semibold mb-8">Ключевые компетенции</h2>
+            <div className="flex items-center gap-3 mb-8">
+              <Icon name="Sparkles" size={28} className="text-primary" />
+              <h2 className="text-3xl font-semibold">Ключевые компетенции</h2>
+            </div>
             <div className="grid md:grid-cols-2 gap-6">
               {competencies.map((comp) => (
-                <div key={comp.title} className="space-y-2">
-                  <h3 className="text-lg font-medium text-foreground">{comp.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{comp.description}</p>
+                <div key={comp.title} className="flex gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <Icon name={comp.icon} size={24} className="text-primary" />
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <h3 className="text-lg font-medium text-foreground">{comp.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{comp.description}</p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -198,7 +215,10 @@ const Index = () => {
 
         <section className="animate-fade-in space-y-12">
           <div className="border-t border-border pt-12">
-            <h2 className="text-3xl font-semibold mb-8">Проекты</h2>
+            <div className="flex items-center gap-3 mb-8">
+              <Icon name="Briefcase" size={28} className="text-primary" />
+              <h2 className="text-3xl font-semibold">Проекты</h2>
+            </div>
             <div className="grid gap-6">
               {projects.map((project) => (
                 <Card 
@@ -257,7 +277,10 @@ const Index = () => {
 
         <section className="animate-fade-in space-y-12">
           <div className="border-t border-border pt-12">
-            <h2 className="text-3xl font-semibold mb-8">Образование</h2>
+            <div className="flex items-center gap-3 mb-8">
+              <Icon name="GraduationCap" size={28} className="text-primary" />
+              <h2 className="text-3xl font-semibold">Образование</h2>
+            </div>
             <div className="space-y-6">
               <div className="border-l-2 border-primary pl-6">
                 <h3 className="text-lg font-medium text-foreground">Новосибирский государственный университет</h3>
@@ -273,7 +296,10 @@ const Index = () => {
 
         <section className="animate-fade-in">
           <div className="border-t border-border pt-12">
-            <h2 className="text-3xl font-semibold mb-8">Контакты</h2>
+            <div className="flex items-center gap-3 mb-8">
+              <Icon name="MessageSquare" size={28} className="text-primary" />
+              <h2 className="text-3xl font-semibold">Контакты</h2>
+            </div>
             <div className="flex flex-wrap gap-4">
               <Button variant="default" size="lg" className="gap-2">
                 <Icon name="Mail" size={18} />
