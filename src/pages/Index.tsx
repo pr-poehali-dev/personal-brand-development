@@ -120,16 +120,25 @@ const Index = () => {
       <div className="max-w-6xl mx-auto px-6 py-16 space-y-32">
         
         <section className="animate-fade-in">
-          <div className="space-y-6">
-            <h1 className="text-5xl font-semibold tracking-tight text-foreground">
-              Виктория Волобуева
-            </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl">
-              Аналитик в управленческом консалтинге
-            </p>
-            <p className="text-lg text-muted-foreground max-w-2xl border-l-2 border-primary pl-6">
-              Формирующийся эксперт, связующее звено между данными и стратегическими решениями
-            </p>
+          <div className="flex flex-col md:flex-row items-start gap-12">
+            <div className="flex-shrink-0">
+              <img 
+                src="https://cdn.poehali.dev/files/photo_2025-08-23_09-39-36.jpg" 
+                alt="Виктория Волобуева"
+                className="w-48 h-48 rounded-full object-cover shadow-lg"
+              />
+            </div>
+            <div className="space-y-6 flex-1">
+              <h1 className="text-5xl font-semibold tracking-tight text-foreground">
+                Виктория Волобуева
+              </h1>
+              <p className="text-xl text-muted-foreground max-w-2xl">
+                Аналитик в управленческом консалтинге
+              </p>
+              <p className="text-lg text-muted-foreground max-w-2xl border-l-2 border-primary pl-6">
+                Формирующийся эксперт, связующее звено между данными и стратегическими решениями
+              </p>
+            </div>
           </div>
         </section>
 
